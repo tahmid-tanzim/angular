@@ -1,12 +1,21 @@
-<input type="text" (keyup)="onKeyup($event)">
-<button (click)="getUsers()">Search</button>
+<md-input-container>
+  <input mdInput placeholder="Search..." (keyup)="onKeyup($event)">
+</md-input-container>
+
+<button md-raised-button (click)="getUsers()">Search</button>
 
 <div *ngIf="users">
   <hr>
   <h4>Total Count: {{users.total_count}}</h4>
-  <ol>
-    <li *ngFor="let u of users.items">{{u.login}}</li>
-  </ol>
+
+  <md-card *ngFor="let u of users.items" class="example-card">
+    <md-card-header>
+      <div md-card-avatar class="example-header-image"></div>
+      <md-card-title>{{u.login}}</md-card-title>
+    </md-card-header>
+    <img md-card-image [src]="u.avatar_url">
+  </md-card>
+
 </div>
 
 
