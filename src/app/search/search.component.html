@@ -11,9 +11,13 @@
   <md-card *ngFor="let u of users.items" class="example-card">
     <md-card-header>
       <div md-card-avatar class="example-header-image"></div>
-      <md-card-title>{{u.login}}</md-card-title>
+      <md-card-title><a [href]="u.html_url" target="_blank">{{u.login}}</a></md-card-title>
     </md-card-header>
     <img md-card-image [src]="u.avatar_url">
+
+    <md-card-actions>
+      <a md-raised-button (click)="detailsUser(u)">Details</a>
+    </md-card-actions>
   </md-card>
 
 </div>
