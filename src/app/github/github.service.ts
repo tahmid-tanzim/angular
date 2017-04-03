@@ -15,7 +15,7 @@ export class GithubService {
   }
 
   getUsers(param): Observable<any> {
-    const url = `http://api.github.com/search/users?q=${param}`;
+    const url = `https://api.github.com/search/users?q=${param}&per_page=10`;
     return this.http.get(url).map(res => res.json());
   }
 }
