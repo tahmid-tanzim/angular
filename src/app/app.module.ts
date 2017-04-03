@@ -4,9 +4,6 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 
-import { MaterialModule } from '@angular/material';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
 import { appRoutes } from './app.routes';
 import { AppComponent } from './app.component';
 import { CircularComponent } from './circular/circular.component';
@@ -24,9 +21,7 @@ import { UserComponent } from './user/user.component';
     RouterModule.forRoot(appRoutes),
     BrowserModule,
     FormsModule,
-    HttpModule,
-    MaterialModule,
-    BrowserAnimationsModule
+    HttpModule
   ],
   providers: [],
   bootstrap: [AppComponent]
