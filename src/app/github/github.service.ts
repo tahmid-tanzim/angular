@@ -14,8 +14,8 @@ export class GithubService {
     return this.http.get(url).map(res => res.json());
   }
 
-  getUsers(param): Observable<any> {
-    const url = `https://api.github.com/search/users?q=${param}&per_page=10`;
+  getUsers(param, page): Observable<any> {
+    const url = `https://api.github.com/search/users?q=${param}&page=${page}&per_page=50`;
     return this.http.get(url).map(res => res.json());
   }
 }

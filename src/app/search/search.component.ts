@@ -13,7 +13,11 @@ export class SearchComponent implements OnInit {
 
   public param;
   public users;
-  constructor(private router: Router, private githubService: GithubService) { }
+  public pages:number[] = [];
+  public page = 1;
+
+  constructor(private router:Router, private githubService:GithubService) {
+  }
 
   ngOnInit() {
   }
@@ -26,11 +30,19 @@ export class SearchComponent implements OnInit {
     this.router.navigate(['user', u.login]);
   }
 
-  getUsers() {
-    this.githubService.getUsers(this.param).subscribe(res => {
-      //const {total_count, items} = res;
+  getUsers(page = 1) {
+    this.page = page;
+    this.githubService.getUsers(this.param, page).subscribe(res => {
+      const {total_count} = res;
       this.users = res;
-      console.log(this.users);
+
+      /* Pagination */
+      const page_count = Math.ceil(total_count / 50);
+      this.pages = [];
+
+      for (let i = 1; i <= page_count; i++) {
+        this.pages.push(i);
+      }
     });
   }
 
