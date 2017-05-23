@@ -16,7 +16,9 @@ export class SearchComponent implements OnInit {
   public pages:number[] = [];
   public page = 1;
 
-  constructor(private router:Router, private githubService:GithubService) {
+  constructor(
+    private router: Router,
+    private githubService: GithubService) {
   }
 
   ngOnInit() {

@@ -6,14 +6,14 @@ import { RouterModule } from '@angular/router';
 
 import { appRoutes } from './app.routes';
 import { AppComponent } from './app.component';
-import { CircularComponent } from './circular/circular.component';
+import { RegisterComponent } from './register/register.component';
 import { SearchComponent } from './search/search.component';
 import { UserComponent } from './user/user.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CircularComponent,
+    RegisterComponent,
     SearchComponent,
     UserComponent
   ],

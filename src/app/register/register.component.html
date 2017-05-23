@@ -1,0 +1,42 @@
+<div class="row">
+  <div class="col-md-4 col-md-offset-4">
+    <h3>
+      {{title}}
+    </h3>
+    <hr>
+    <form (ngSubmit)="onSubmit(jobOpeningForm.value)" #jobOpeningForm="ngForm" novalidate>
+      <div class="form-group">
+        <label for="inputFullName">Full Name</label>
+        <input type="text" class="form-control" id="inputFullName" placeholder="Full Name" ngControl="fullname" required>
+      </div>
+      <div class="form-group">
+        <label for="inputDOB">Date of Birth</label>
+        <input type="date" class="form-control" id="inputDOB" placeholder="mm/dd/yyyy" ngControl="dob">
+      </div>
+      <div class="form-group">
+        <label for="inputEmail">Email address</label>
+        <input type="email" class="form-control" id="inputEmail" placeholder="Email" ngControl="email">
+      </div>
+      <div class="form-group">
+        <label for="inputPassword">Password</label>
+        <input type="password" class="form-control" id="inputPassword" placeholder="Password" ngControl="password">
+      </div>
+      <div class="form-group">
+        <label for="inputJobType">Job Type</label>
+        <select class="form-control" id="inputJobType" ngControl="jobtype">
+          <option value="">Select One</option>
+          <option value="WEB">Web Developer</option>
+          <option value="IOS">iOS Application Developer</option>
+          <option value="ANDROID">Android Application Developer</option>
+        </select>
+      </div>
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" ngControl="language"> English Language Requirements TOEFL or IELTS?
+        </label>
+      </div>
+      <button type="submit" class="btn btn-default"><i class="glyphicon glyphicon-floppy-disk"></i> Save</button>
+    </form>
+
+  </div>
+</div>

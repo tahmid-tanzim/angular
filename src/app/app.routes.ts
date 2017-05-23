@@ -1,14 +1,14 @@
 import { Routes } from '@angular/router';
 
-import { CircularComponent } from './circular/circular.component';
+import { RegisterComponent } from './register/register.component';
 import { SearchComponent } from './search/search.component';
 import { UserComponent } from './user/user.component';
 
 
 export const appRoutes: Routes = [
   {
-    path: 'circular',
-    component: CircularComponent
+    path: 'register',
+    component: RegisterComponent
   },
   {
     path: 'search',
