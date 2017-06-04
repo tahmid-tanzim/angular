@@ -9,13 +9,15 @@ import { AppComponent } from './app.component';
 import { RegisterComponent } from './register/register.component';
 import { SearchComponent } from './search/search.component';
 import { UserComponent } from './user/user.component';
+import { ServerComponent } from './server/server.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RegisterComponent,
     SearchComponent,
-    UserComponent
+    UserComponent,
+    ServerComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
