@@ -7,7 +7,8 @@
     <form (ngSubmit)="onSubmit(jobOpeningForm.value)" #jobOpeningForm="ngForm" novalidate>
       <div class="form-group">
         <label for="inputFullName">Full Name</label>
-        <input type="text" class="form-control" id="inputFullName" placeholder="Full Name" ngControl="fullname" required>
+        <input type="text" class="form-control" id="inputFullName" placeholder="Full Name" ngControl="fullname"
+               required>
       </div>
       <div class="form-group">
         <label for="inputDOB">Date of Birth</label>
@@ -40,3 +41,5 @@
 
   </div>
 </div>
+
+<app-server></app-server>

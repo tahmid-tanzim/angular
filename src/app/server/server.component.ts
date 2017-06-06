@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ServerComponent implements OnInit {
 
+  server_name: string = '';
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  onUpdateServerName(event: Event) {
+    this.server_name = (<HTMLInputElement>event.target).value;
   }
 
 }
