@@ -10,6 +10,13 @@ import { RegisterComponent } from './register/register.component';
 import { SearchComponent } from './search/search.component';
 import { UserComponent } from './user/user.component';
 import { ServerComponent } from './server/server.component';
+import { HeaderComponent } from './header/header.component';
+import { RecipesComponent } from './recipes/recipes.component';
+import { RecipeListComponent } from './recipes/recipe-list/recipe-list.component';
+import { RecipeItemComponent } from './recipes/recipe-list/recipe-item/recipe-item.component';
+import { ShoppingListComponent } from './shopping-list/shopping-list.component';
+import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-edit.component';
+import { RecipeDetailsComponent } from './recipes/recipe-details/recipe-details.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +24,14 @@ import { ServerComponent } from './server/server.component';
     RegisterComponent,
     SearchComponent,
     UserComponent,
-    ServerComponent
+    ServerComponent,
+    HeaderComponent,
+    RecipesComponent,
+    RecipeListComponent,
+    RecipeItemComponent,
+    ShoppingListComponent,
+    ShoppingEditComponent,
+    RecipeDetailsComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
