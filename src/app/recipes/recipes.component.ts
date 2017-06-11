@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RecipesComponent implements OnInit {
 
+  recipeName = '';
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  onRecipeSelected(recipeName: string) {
+    this.recipeName = recipeName;
   }
 
 }
