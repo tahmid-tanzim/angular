@@ -1,4 +1,5 @@
-import { Component, OnInit, Input, OnChanges } from '@angular/core';
+import {Component, OnInit, Input, OnChanges} from '@angular/core';
+import {Recipe} from '../recipe.model';
 
 @Component({
   selector: 'app-recipe-details',
@@ -6,17 +7,17 @@ import { Component, OnInit, Input, OnChanges } from '@angular/core';
   styleUrls: ['./recipe-details.component.css']
 })
 export class RecipeDetailsComponent implements OnInit, OnChanges {
-  @Input('recipe') recipeName: string;
+  @Input('recipe') recipe: Recipe;
 
   constructor() {
   }
 
   ngOnInit() {
-    this.recipeName = 'Recipe Name';
+    this.recipe = new Recipe('Recipe Name', 'Lorem Ipsum', '');
   }
 
   ngOnChanges(changes) {
-    console.log('Changed', changes.recipeName.currentValue, changes.recipeName.previousValue);
+    console.log('Changed', changes.recipe.currentValue, changes.recipe.previousValue);
   }
 
 }

@@ -34,7 +34,8 @@
   </div>
 
   <ul class="pagination" *ngIf="pages.length > 1">
-    <li class="disabled"><a (click)="getUsers(page - 1)" aria-label="Previous"><span aria-hidden="true">«</span></a></li>
+    <li class="disabled"><a (click)="getUsers(page - 1)" aria-label="Previous"><span aria-hidden="true">«</span></a>
+    </li>
     <li *ngFor="let p of pages;" [ngClass]="{'active': page === p}">
       <a (click)="getUsers(p)">{{p}} <span *ngIf="page === p" class="sr-only">(current)</span></a>
     </li>

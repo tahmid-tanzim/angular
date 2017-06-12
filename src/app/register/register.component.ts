@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-register',
@@ -8,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 export class RegisterComponent implements OnInit {
 
   public title = 'Loading...';
-  constructor() { }
+
+  constructor() {
+  }
 
   ngOnInit() {
     this.title = 'New Job Openings';

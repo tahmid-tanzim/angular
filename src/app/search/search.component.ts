@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import {Component, OnInit} from '@angular/core';
+import {Router} from '@angular/router';
 
-import { GithubService } from '../github/github.service';
+import {GithubService} from '../github/github.service';
 
 @Component({
   selector: 'app-search',
@@ -13,12 +13,11 @@ export class SearchComponent implements OnInit {
 
   public param;
   public users;
-  public pages:number[] = [];
+  public pages: number[] = [];
   public page = 1;
 
-  constructor(
-    private router: Router,
-    private githubService: GithubService) {
+  constructor(private router: Router,
+              private githubService: GithubService) {
   }
 
   ngOnInit() {

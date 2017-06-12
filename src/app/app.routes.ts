@@ -1,10 +1,10 @@
-import { Routes } from '@angular/router';
+import {Routes} from '@angular/router';
 
-import { RegisterComponent } from './register/register.component';
-import { SearchComponent } from './search/search.component';
-import { UserComponent } from './user/user.component';
-import { RecipesComponent } from './recipes/recipes.component';
-import { ShoppingListComponent } from './shopping-list/shopping-list.component';
+import {RegisterComponent} from './register/register.component';
+import {SearchComponent} from './search/search.component';
+import {UserComponent} from './user/user.component';
+import {RecipesComponent} from './recipes/recipes.component';
+import {ShoppingListComponent} from './shopping-list/shopping-list.component';
 
 
 export const appRoutes: Routes = [
