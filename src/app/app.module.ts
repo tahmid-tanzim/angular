@@ -17,7 +17,7 @@ import {RecipeItemComponent} from './recipes/recipe-list/recipe-item/recipe-item
 import {ShoppingListComponent} from './shopping-list/shopping-list.component';
 import {ShoppingEditComponent} from './shopping-list/shopping-edit/shopping-edit.component';
 import {RecipeDetailsComponent} from './recipes/recipe-details/recipe-details.component';
-import { BasicHighlightDirective } from './basic-highlight/basic-highlight.directive';
+import {HighlightDirective} from './directive/highlight.directive';
 
 @NgModule({
   declarations: [
@@ -33,7 +33,7 @@ import { BasicHighlightDirective } from './basic-highlight/basic-highlight.direc
     ShoppingListComponent,
     ShoppingEditComponent,
     RecipeDetailsComponent,
-    BasicHighlightDirective
+    HighlightDirective
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
