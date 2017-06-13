@@ -1,30 +1,20 @@
 import {Component, OnInit} from '@angular/core';
+import {AccountService} from '../service/account.service';
 
 @Component({
   selector: 'app-account',
   templateUrl: './account.component.html',
-  styleUrls: ['./account.component.css']
+  styleUrls: ['./account.component.css'],
+  providers: [AccountService]
 })
 export class AccountComponent implements OnInit {
-  accounts = [
-    {
-      name: 'Master Account',
-      status: 'active'
-    },
-    {
-      name: 'Test Account',
-      status: 'inactive'
-    },
-    {
-      name: 'Hidden Account',
-      status: 'unknown'
-    }
-  ];
+  accounts: {name: string, status: string}[] = [];
 
-  constructor() {
+  constructor(private accountService: AccountService) {
   }
 
   ngOnInit() {
+    this.accounts = this.accountService.accounts;
   }
 
   onAccountAdded(newAccount: { name: string, status: string }) {
