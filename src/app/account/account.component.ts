@@ -8,7 +8,7 @@ import {AccountService} from '../service/account.service';
   providers: [AccountService]
 })
 export class AccountComponent implements OnInit {
-  accounts: {name: string, status: string}[] = [];
+  accounts: { name: string, status: string }[] = [];
 
   constructor(private accountService: AccountService) {
   }
