@@ -20,6 +20,9 @@ import {RecipeDetailsComponent} from './recipes/recipe-details/recipe-details.co
 import {HighlightDirective} from './directive/highlight.directive';
 import {UnlessDirective} from './directive/unless.directive';
 import {DropdownDirective} from './directive/dropdown.directive';
+import {AccountComponent} from './account/account.component';
+import {AccountListComponent} from './account/account-list/account-list.component';
+import {NewAccountComponent} from './account/new-account/new-account.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +40,10 @@ import {DropdownDirective} from './directive/dropdown.directive';
     RecipeDetailsComponent,
     HighlightDirective,
     UnlessDirective,
-    DropdownDirective
+    DropdownDirective,
+    AccountComponent,
+    AccountListComponent,
+    NewAccountComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
