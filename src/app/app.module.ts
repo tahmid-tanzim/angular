@@ -18,6 +18,7 @@ import {ShoppingListComponent} from './shopping-list/shopping-list.component';
 import {ShoppingEditComponent} from './shopping-list/shopping-edit/shopping-edit.component';
 import {RecipeDetailsComponent} from './recipes/recipe-details/recipe-details.component';
 import {HighlightDirective} from './directive/highlight.directive';
+import {UnlessDirective} from './directive/unless.directive';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import {HighlightDirective} from './directive/highlight.directive';
     ShoppingListComponent,
     ShoppingEditComponent,
     RecipeDetailsComponent,
-    HighlightDirective
+    HighlightDirective,
+    UnlessDirective
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
