@@ -19,6 +19,7 @@ import {ShoppingEditComponent} from './shopping-list/shopping-edit/shopping-edit
 import {RecipeDetailsComponent} from './recipes/recipe-details/recipe-details.component';
 import {HighlightDirective} from './directive/highlight.directive';
 import {UnlessDirective} from './directive/unless.directive';
+import {DropdownDirective} from './directive/dropdown.directive';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import {UnlessDirective} from './directive/unless.directive';
     ShoppingEditComponent,
     RecipeDetailsComponent,
     HighlightDirective,
-    UnlessDirective
+    UnlessDirective,
+    DropdownDirective
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
