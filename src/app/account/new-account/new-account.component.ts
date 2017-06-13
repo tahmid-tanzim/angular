@@ -1,4 +1,5 @@
 import {Component, EventEmitter, Output} from '@angular/core';
+import {LoggingService} from '../../service/logging.service';
 
 @Component({
   selector: 'app-new-account',
@@ -10,7 +11,9 @@ export class NewAccountComponent {
 
   onCreateAccount(name: string, status: string) {
     this.accountAdded.emit({name, status});
-    console.log('A server status changed, new status: ', status);
+
+    const service = new LoggingService();
+    service.logStatusChanged(status);
   }
 
   constructor() {
