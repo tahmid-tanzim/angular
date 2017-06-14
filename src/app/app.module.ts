@@ -5,6 +5,7 @@ import {HttpModule} from '@angular/http';
 import {RouterModule} from '@angular/router';
 
 import {appRoutes} from './app.routes';
+
 import {AppComponent} from './app.component';
 import {RegisterComponent} from './register/register.component';
 import {SearchComponent} from './search/search.component';
@@ -17,14 +18,17 @@ import {RecipeItemComponent} from './recipes/recipe-list/recipe-item/recipe-item
 import {ShoppingListComponent} from './shopping-list/shopping-list.component';
 import {ShoppingEditComponent} from './shopping-list/shopping-edit/shopping-edit.component';
 import {RecipeDetailsComponent} from './recipes/recipe-details/recipe-details.component';
-import {HighlightDirective} from './directive/highlight.directive';
-import {UnlessDirective} from './directive/unless.directive';
-import {DropdownDirective} from './directive/dropdown.directive';
 import {AccountComponent} from './account/account.component';
 import {AccountListComponent} from './account/account-list/account-list.component';
 import {NewAccountComponent} from './account/new-account/new-account.component';
+
+import {HighlightDirective} from './directive/highlight.directive';
+import {UnlessDirective} from './directive/unless.directive';
+import {DropdownDirective} from './directive/dropdown.directive';
+
 import {AccountService} from './service/account.service';
 import {LoggingService} from './service/logging.service';
+import {ShoppingListService} from "./service/shopping-list.service";
 
 @NgModule({
   declarations: [
@@ -54,6 +58,7 @@ import {LoggingService} from './service/logging.service';
     HttpModule
   ],
   providers: [
+    ShoppingListService,
     AccountService,
     LoggingService
   ],
