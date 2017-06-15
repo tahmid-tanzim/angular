@@ -13,7 +13,7 @@ export class RecipeDetailsComponent implements OnInit, OnChanges {
   }
 
   ngOnInit() {
-    this.recipe = new Recipe('Recipe Name', 'Lorem Ipsum', '');
+    this.recipe = new Recipe('Recipe Name', 'Lorem Ipsum', '', []);
   }
 
   ngOnChanges(changes) {
