@@ -1,8 +1,11 @@
-import { Routes } from '@angular/router';
+import {Routes} from '@angular/router';
 
-import { RegisterComponent } from './register/register.component';
-import { SearchComponent } from './search/search.component';
-import { UserComponent } from './user/user.component';
+import {RegisterComponent} from './register/register.component';
+import {SearchComponent} from './search/search.component';
+import {UserComponent} from './user/user.component';
+import {RecipesComponent} from './recipes/recipes.component';
+import {ShoppingListComponent} from './shopping-list/shopping-list.component';
+import {AccountComponent} from './account/account.component';
 
 
 export const appRoutes: Routes = [
@@ -17,5 +20,18 @@ export const appRoutes: Routes = [
   {
     path: 'user/:id',
     component: UserComponent
+  },
+  {
+    path: 'recipe',
+    component: RecipesComponent
+  },
+  {
+    path: 'shopping',
+    component: ShoppingListComponent
+  },
+  {
+    path: 'account',
+    component: AccountComponent
   }
+
 ];

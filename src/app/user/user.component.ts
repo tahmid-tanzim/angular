@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import {Component, OnInit} from '@angular/core';
+import {ActivatedRoute} from '@angular/router';
 
-import { GithubService } from '../github/github.service';
+import {GithubService} from '../service/github.service';
 
 @Component({
   selector: 'app-user',
@@ -11,7 +11,9 @@ import { GithubService } from '../github/github.service';
 })
 export class UserComponent implements OnInit {
   public user;
-  constructor(private activatedRoute: ActivatedRoute,  private githubService: GithubService) { }
+
+  constructor(private activatedRoute: ActivatedRoute, private githubService: GithubService) {
+  }
 
   ngOnInit() {
     const {id} = this.activatedRoute.snapshot.params;
